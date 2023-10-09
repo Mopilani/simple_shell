@@ -15,10 +15,13 @@
 #include <ctype.h>
 
 #define ERROR -1
+typedef char *string;
 typedef char **_dou_p;
 
 #define BUFSIZE 1024
 #define TOK_BUFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
+
+int _putchar(char c);
 
 #endif
