@@ -23,5 +23,6 @@ typedef char **_dou_p;
 #define TOK_DELIM " \t\r\n\a"
 
 int _putchar(char c);
+void _env();
 
 #endif
