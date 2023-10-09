@@ -24,5 +24,7 @@ typedef char **_dou_p;
 
 int _putchar(char c);
 void _env();
+void execmd(_dou_p local_argv, _dou_p env, char **argv);
+
 
 #endif
