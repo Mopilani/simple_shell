@@ -1,5 +1,5 @@
-#ifndef  _MAIN_H_
-#define  _MAIN_H_
+#ifndef  MAIN_H
+#define  MAIN_H
 
 #include <stdio.h>
 #include <unistd.h>
@@ -11,8 +11,14 @@
 #include <fcntl.h>
 #include <signal.h>
 #include <limits.h>
+#include <string.h>
+#include <ctype.h>
+
+#define ERROR -1
+typedef char **_dou_p;
 
 #define BUFSIZE 1024
 #define TOK_BUFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
 
+#endif
