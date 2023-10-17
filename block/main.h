@@ -163,4 +163,41 @@ char *_strchr(char *, char);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
+
+/* realloc.c */
+char *_memset(char *, char, unsigned int);
+void ffree(char **);
+void *_realloc(void *, unsigned int, unsigned int);
+
+/* memory.c */
+int bfree(void **);
+
+/* atoi.c */
+int int_act(info_t *);
+int is_del(char, char *);
+int _isalpha(int);
+int _atoi(char *);
+
+/* errors1.c */
+int _convrt_str_to_int(char *);
+void print_err(info_t *, char *);
+int print_d(int, int);
+char *convert_number(long int, int, int);
+void remove_comments(char *);
+
+/* builtin.c */
+int shell_exit(info_t *);
+int _cd(info_t *);
+int _help(info_t *);
+
+/* builtin1.c */
+int _history(info_t *);
+int _myalias(info_t *);
+
+/*getline.c */
+ssize_t get_input(info_t *);
+int _getline(info_t *, char **, size_t *);
+void sigintHandler(int);
+
+
 #endif
