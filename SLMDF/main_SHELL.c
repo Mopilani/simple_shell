@@ -14,7 +14,7 @@ int main(int ac, dou_p argv, dou_p env)
 	/*dou_p dou_argv, semi_colon;*/
 
 	(void)ac;
-	while (true)
+	while (1)
 	{
 		if (isatty(STDIN_FILENO))
 			_print_string("$ ");
