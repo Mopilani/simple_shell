@@ -36,22 +36,26 @@ typedef struct main
 extern dou_p environ;
 
 /* _str.c */
+char *_strcat(string dest, string src);
+int _strcmp(string s1, string s2);
+int _strchr(string s, char c);
+
+/* _str1.c */
 char *_strncpy(char *dest, char *src, size_t n);
 int _strncmp(char *str1, char *str2, size_t n);
 char *_strtok(string str, string _delimiters);
-char *_strcat(string dest, string src);
 char *_strcpy(string dest, string src);
-int _strcmp(string s1, string s2);
-int _strchr(string s, char c);
-int _print_string(string st);
-char *_strdup(string str);
 int _strlen(string s);
+char *_strdup(string str);
+
+int _print_string(string st);
 int _putchar(char c);
 int _isdigit(int c);
 
 /* _atoi.c */
 int _atoi(string str);
 
+/* slt.c */
 int (*_slt(string s))(dou_p dou_argv, size_t line_num, dou_p argv);
 int _exit_num(dou_p local_argv, size_t line_num, dou_p argv);
 int _unsetenv(dou_p dou_argv, size_t line_num, dou_p argv);
