@@ -19,12 +19,9 @@ int main(int ac, dou_p argv, dou_p env)
 		if (isatty(STDIN_FILENO))
 			_print_string("$ ");
 
-		_print_string("Get line");
 		if ((getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
 		{
-			_print_string("Erorr befor");
 			_free(getline_ptr, 0);
-			_print_string("Erorr after");
 			_putchar('\n');
 			exit(ERROR);
 		}
