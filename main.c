@@ -1,43 +1,44 @@
 #include "main.h"
 
 /**
- * main - Simple_Shell main function.
- * @ac: args count.
- * @argv: passed args double pointer.
- * @env: Environmental variable.
- * Return: returns 0 on success.
+ * main - entry point
+ * @arg_count: arg count
+ * @arg_vec: arg vector
+ *
+ * Return:if ( success) 0,else  1 on error
  */
-int main(int ac, dou_p argv, dou_p env)
+int main(int arg_count, char **arg_vec)
 {
-	size_t bffsz, line_num = 1;
-	string getline_ptr = NULL;
-	/*dou_p dou_argv, semi_colon;*/
+	info_t info[] = { INFO_INIT };
+	int fd = 2;
 
-	(void)ac;
-	while (1)
+	asm ("mov %1, %0\n\t"
+		"add $3, %0"
+		: "=r" (fd)
+		: "r" (fd));
+
+	if (arg_count == 2)
 	{
-		if (isatty(STDIN_FILENO))
-			_print_string("$ ");
-
-		if ((getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
+		fd = open(arg_vec[1], O_RDONLY);
+		if (fd == -1)
 		{
-			_free(getline_ptr, 0);
-			_putchar('\n');
-			exit(ERROR);
+			if (errno == EACCES)
+				exit(126);
+			if (errno == ENOENT)
+			{
+				_puts(arg_vec[0]);
+				_puts(": 0: Can't open ");
+				_puts(arg_vec[1]);
+				_putchar('\n');
+				_putchar(BUF_FLUSH);
+				exit(127);
+			}
+			return (EXIT_FAILURE);
 		}
-
-		if (!(_strcmp(getline_ptr, "\n"))) /* Handles New line */
-		{
-			/*_free(getline_ptr, 0);*/
-			line_num++;
-			continue;
-		}
-
-		_tokenize_slt_exec(getline_ptr, env, argv, line_num);
-
-		if (!(isatty(STDIN_FILENO)))
-			break;
+		info->readfd = fd;
 	}
-	/*free(getline_ptr);*/
-	return (0);
+	populate_env_lst(info);
+	read_history(info);
+	hsh(info, arg_vec);
+	return (EXIT_SUCCESS);
 }
