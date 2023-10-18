@@ -10,7 +10,8 @@
  */
 int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx)
 {
-	dou_p, dou_av/*, semi_colon*/ = NULL;
+	dou_p/*, semi_colon*/ = NULL;
+	dou_av/*, semi_colon*/ = NULL;
 
 		dou_av = _tokenization(gtln, " \n\t\r");
 
