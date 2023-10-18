@@ -45,7 +45,7 @@ char *_strdup(string str);
 int _strlen(string s);
 int _putchar(char c);
 int _isdigit(int c);
-int _atoi(string s);
+int _atoi(string str);
 
 int (*_slt(string s))(dou_p dou_argv, size_t line_num, dou_p argv);
 int _exit_num(dou_p local_argv, size_t line_num, dou_p argv);
