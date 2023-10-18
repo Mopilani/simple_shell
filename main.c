@@ -21,15 +21,11 @@ int main(int ac, dou_p argv, dou_p env)
 
 		if ((getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
 		{
-			_print_string("After get line ");
 			_free(getline_ptr, 0);
-			_print_string("Trying some thing");
 			_putchar('\n');
-			_print_string("Trying some thing 2");
 			exit(ERROR);
 		}
 
-		_print_string("Not getted line");
 		if (!(_strcmp(getline_ptr, "\n"))) /* Handles New line */
 		{
 			/*_free(getline_ptr, 0);*/
@@ -37,10 +33,8 @@ int main(int ac, dou_p argv, dou_p env)
 			continue;
 		}
 
-		_print_string("Tokenize");
 		_tokenize_slt_exec(getline_ptr, env, argv, line_num);
 
-		_print_string("isatty");
 		if (!(isatty(STDIN_FILENO)))
 			break;
 	}
