@@ -7,10 +7,9 @@
  * @f_d: File descriptor to read from.
  * Return: returns the number of characters read
  */
+
 size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 {
-	printf("Getting line");
-
 	char *buffr = NULL;
 	size_t total_rd = 0;
 	ssize_t rd;
@@ -47,7 +46,6 @@ size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 		}
 		else if (rd == 0)
 		{
-			printf("Erorr befor");
 			free(buffr);
 			return (-1);
 		}
@@ -55,6 +53,5 @@ size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 	} while (rd > 0 && buffr[total_rd - 1] != '\n');
 
 	buffr[total_rd] = '\0';
-	printf("Line getted");
 	return (total_rd);
 }
