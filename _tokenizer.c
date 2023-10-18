@@ -11,7 +11,7 @@
 int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx)
 {
 	dou_p dou_av/*, semi_colon*/ = NULL;
-		
+
 		_print_string("Hello world");
 		dou_av = _tokenization(gtln, " \n\t\r");
 		_print_string("No hello world");
