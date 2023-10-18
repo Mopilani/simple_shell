@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * int_act - return true if shell is int_act mode

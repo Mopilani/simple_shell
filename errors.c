@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  *_input_str - prints an input string
