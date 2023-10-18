@@ -15,7 +15,7 @@
 typedef int make_iso_compilers_happy;
 
 #define ERROR -1
-#define BUFSIZE 1024
+#define _BUFSIZE 1024
 
 typedef char *string;
 typedef char **dou_p;
