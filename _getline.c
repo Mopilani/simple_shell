@@ -7,6 +7,7 @@
  * @f_d: File descriptor to read from.
  * Return: returns the number of characters read
  */
+size_t _getline(char **getlineptr, size_t *bffsz, int f_d);
 size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 {
 	char *buffr = NULL;
