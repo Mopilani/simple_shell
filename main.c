@@ -21,7 +21,9 @@ int main(int ac, dou_p argv, dou_p env)
 
 		if ((getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
 		{
+			printf('Erorr befor');
 			_free(getline_ptr, 0);
+			printf('Erorr after');
 			_putchar('\n');
 			exit(ERROR);
 		}
