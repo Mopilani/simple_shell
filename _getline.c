@@ -10,6 +10,7 @@
 size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 {
 	printf("Getting line");
+
 	char *buffr = NULL;
 	size_t total_rd = 0;
 	ssize_t rd;
