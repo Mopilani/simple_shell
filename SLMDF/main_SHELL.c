@@ -2,7 +2,7 @@
 
 /**
  * main - Simple_Shell main function.
- * @ac: args count.	
+ * @ac: args count.
  * @argv: passed args double pointer.
  * @env: Environmental variable.
  * Return: returns 0 on success.
