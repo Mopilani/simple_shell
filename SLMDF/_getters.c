@@ -10,7 +10,7 @@ string _get_PATH(string command)
 {
 	int dir_length, command_length;
 	string path = NULL, _token = NULL, _addr = NULL, _command = NULL;
-	char path_cp[BUFSIZE], file_path[BUFSIZE];
+	char path_cp[_BUFSIZE], file_path[_BUFSIZE];
 	struct stat bffr;
 
 	path = getenv("PATH");

@@ -15,7 +15,7 @@ size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 	ssize_t rd;
 
 	if (*bffsz == 0)
-		*bffsz = BUFSIZE;
+		*bffsz = _BUFSIZE;
 
 	buffr = (char *)malloc(*bffsz);
 	if (buffr == NULL)
