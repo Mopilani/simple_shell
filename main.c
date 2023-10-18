@@ -35,7 +35,6 @@ int main(int ac, dou_p argv, dou_p env)
 
 		_tokenize_slt_exec(getline_ptr, env, argv, line_num);
 
-
 		if (!(isatty(STDIN_FILENO)))
 			break;
 	}
