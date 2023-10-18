@@ -62,8 +62,10 @@ int _atoi(string str);
 int (*_slt(string s))(dou_p dou_argv, size_t line_num, dou_p argv);
 
 int _exit_num(dou_p local_argv, size_t line_num, dou_p argv);
-int _unsetenv(dou_p dou_argv, size_t line_num, dou_p argv);
+
+/* _env_controle.c */
 int _setenv(dou_p dou_argv, size_t line_num, dou_p argv);
+int _unsetenv(dou_p dou_argv, size_t line_num, dou_p argv);
 int _env(dou_p cmmd, size_t line_num, dou_p argv);
 
 /* _cd.c */
