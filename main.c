@@ -19,7 +19,7 @@ int main(int ac, dou_p argv, dou_p env)
 		if (isatty(STDIN_FILENO))
 			_print_string("$ ");
 
-			_print_string("Get line");
+		_print_string("Get line");
 		if ((_getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
 		{
 			printf("Erorr befor");
