@@ -16,9 +16,8 @@ int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx)
 
 		if (dou_av && (!(_is_prsent(dou_av[0]))))
 		{
-			_slt(dou_av[0])(dou_av, l_dx, av);
-			if (dou_av)
-				_free(dou_av, 0);
+			_slt(dou_av[0])(dou_av, l_dx, av); /*if (dou_av)*/
+			_free(dou_av, 0);
 			return (0);
 		}
 
@@ -26,6 +25,7 @@ int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx)
 
 	return (0);
 }
+
 
 /**
  * _tokenization - Takes the string from stdin and tokenize into dou_p
