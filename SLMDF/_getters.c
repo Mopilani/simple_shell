@@ -3,13 +3,13 @@
 /**
  * get_PATH - This function gets all PATHs
  *                          and determine the path for the command.
- * @command: The command from stdin who's path is to be found.
+ * @cmmd: The command from stdin who's path is to be found.
  * Return: A pointer to valid PAth or NULL if it doesn't exist.
  */
-string _get_PATH(string command)
+string _get_PATH(string cmmd)
 {
-	int dir_length, command_length;
-	string path = NULL, _token = NULL, _addr = NULL, _command = NULL;
+	int dir_length, cmmd_length;
+	string path = NULL, _token = NULL, _addr = NULL, _cmmd = NULL;
 	char path_cp[_BUFSIZE], file_path[_BUFSIZE];
 	struct stat bffr;
 
@@ -18,7 +18,7 @@ string _get_PATH(string command)
 	if (path)
 	{
 		_strcpy(path_cp, path);
-		command_length = _strlen(command);
+		cmmd_length = _strlen(cmmd);
 
 		_token = _strtok(path_cp, ":");
 		while (_token != NULL)
@@ -27,12 +27,12 @@ string _get_PATH(string command)
 
 			_strcpy(file_path, _token);
 			_strcat(file_path, "/");
-			_strcat(file_path, command);
+			_strcat(file_path, cmmd);
 			_strcat(file_path, "\0");
 
 			if (!(stat(file_path, &bffr)))
 			{
-				_addr = malloc(command_length + dir_length + 2);
+				_addr = malloc(cmmd_length + dir_length + 2);
 				_strcpy(_addr, file_path);
 				return (_addr);
 			}
@@ -40,11 +40,11 @@ string _get_PATH(string command)
 			_token = _strtok(NULL, ":");
 		}
 
-		if (!(stat(command, &bffr))) /* /bin/ls */
+		if (!(stat(cmmd, &bffr))) /* /bin/ls */
 		{
-			_command = malloc(command_length + 1);
-			_strcpy(_command, command);
-			return (_command);
+			_cmmd = malloc(cmmd_length + 1);
+			_strcpy(_cmmd, cmmd);
+			return (_cmmd);
 		}
 	}
 	return (NULL);
