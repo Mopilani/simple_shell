@@ -86,7 +86,7 @@ int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx);
 dou_p _tokenization(string str, string _delimiters);
 
 /* _getline.c */
-size_t _getline(char **getlineptr, size_t *n, int f_d);
+size_t _getline(char **getlineptr, size_t *bffsz, int f_d);
 
 /* malloc.c */
 void *_realloc(void *ptr, size_t new_size);
