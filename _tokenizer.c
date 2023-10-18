@@ -18,8 +18,12 @@ int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx)
 		if (dou_av && (!(_is_prsent(dou_av[0]))))
 		{
 			_slt(dou_av[0])(dou_av, l_dx, av); /*if (dou_av)*/
+<<<<<<< HEAD
 			printf("Herer after salt %s", dou_av[0]);
 			_print_string("No thing 55");
+=======
+			_print_string("Herer after salt %s", dou_av);
+>>>>>>> parent of 3dd87a5... 180
 			_free(dou_av, 0);
 			return (0);
 		}
