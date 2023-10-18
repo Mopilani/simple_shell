@@ -20,7 +20,7 @@ int main(int ac, dou_p argv, dou_p env)
 			_print_string("$ ");
 
 		_print_string("Get line");
-		if ((_getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
+		if ((getline(&getline_ptr, &bffsz, stdin)) == EOF)	/* ctrl D */
 		{
 			printf("Erorr befor");
 			_free(getline_ptr, 0);
