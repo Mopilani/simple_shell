@@ -11,15 +11,25 @@
 int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx)
 {
 	dou_p dou_av/*, semi_colon*/ = NULL;
-
+		
+		_print_string("Hello world");
 		dou_av = _tokenization(gtln, " \n\t\r");
-
+		_print_string("No hello world");
 		if (dou_av && (!(_is_prsent(dou_av[0]))))
 		{
 			_slt(dou_av[0])(dou_av, l_dx, av); /*if (dou_av)*/
-			printf("Herer after salt %s", dou_av);
+<<<<<<< HEAD
+			printf("Herer after salt %s", dou_av[0]);
+			_print_string("No thing 55");
+=======
+			_print_string("Herer after salt %s", dou_av);
+>>>>>>> parent of 3dd87a5... 180
 			_free(dou_av, 0);
 			return (0);
+		}
+		else
+		{
+			_print_string("Double Not Found");
 		}
 
 		_execmd(dou_av, env, av, l_dx);
