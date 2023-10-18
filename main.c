@@ -38,10 +38,7 @@ int main(int arg_count, char **arg_vec)
 		info->readfd = fd;
 	}
 	populate_env_lst(info);
-	
 	read_history(info);
-	
 	hsh(info, arg_vec);
-	
 	return (EXIT_SUCCESS);
 }
