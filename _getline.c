@@ -45,6 +45,7 @@ size_t _getline(char **getlineptr, size_t *bffsz, int f_d)
 		}
 		else if (rd == 0)
 		{
+			printf("Erorr befor");
 			free(buffr);
 			return (-1);
 		}
