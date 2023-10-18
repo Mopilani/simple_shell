@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * main - Simple Shell main function.
- * @argv: double pointer for strings on stdin.
- * @_cxt: stdin word count.
+ * main - Simple_Shell main function.
+ * @argv: passed args double pointer.
+ * @ac: args count.
  * @env: Environmental variable.
  * Return: returns 0 on success.
  */
-int main(int _cxt, dou_p argv, dou_p env)
+int main(int ac, dou_p argv, dou_p env)
 {
 	size_t bffsz, line_num = 1;
 	string getline_ptr = NULL;
