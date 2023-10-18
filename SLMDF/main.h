@@ -12,8 +12,6 @@
 #include <ctype.h>
 #include <string.h>
 
-typedef int make_iso_compilers_happy;
-
 #define ERROR -1
 #define _BUFSIZE 1024
 
