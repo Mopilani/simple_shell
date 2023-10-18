@@ -15,11 +15,11 @@
 typedef int make_iso_compilers_happy;
 
 #define ERROR -1
-#define GERRY 1
-#define _BFFSZ 1024
+#define BUFSIZE 1024
 
 typedef char *string;
 typedef char **dou_p;
+
 /**
  * struct main - Structure representing a shell built-in command.
  * @key_w: The keyword or command name.
@@ -61,6 +61,7 @@ int _atoi(string str);
 /* slt.c */
 int (*_slt(string s))(dou_p dou_argv, size_t line_num, dou_p argv);
 
+/* _exit_num.c */
 int _exit_num(dou_p local_argv, size_t line_num, dou_p argv);
 
 /* _env_controle.c */
@@ -91,10 +92,11 @@ size_t _getline(char **getlineptr, size_t *n, int f_d);
 void *_realloc(void *ptr, size_t new_size);
 void _free(void *_malloc, int is_dou_p);
 
+/* _print_num.c */
 int _print_num(size_t _n, int _c);
 
 /* _getters.c */
 string _get_PATH(string command);
 string _getenv(string str);
 
-#endif /* End of Include Guard */
+#endif
