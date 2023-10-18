@@ -52,6 +52,7 @@ int _print_string(string st);
 /* _putchar.c */
 int _putchar(char c);
 
+/* _isdigit.c */
 int _isdigit(int c);
 
 /* _atoi.c */
@@ -59,22 +60,39 @@ int _atoi(string str);
 
 /* slt.c */
 int (*_slt(string s))(dou_p dou_argv, size_t line_num, dou_p argv);
+
 int _exit_num(dou_p local_argv, size_t line_num, dou_p argv);
 int _unsetenv(dou_p dou_argv, size_t line_num, dou_p argv);
 int _setenv(dou_p dou_argv, size_t line_num, dou_p argv);
 int _env(dou_p cmmd, size_t line_num, dou_p argv);
+
+/* _cd.c */
 int _cd(dou_p cmmd, size_t line_num, dou_p argv);
+
+/* _cd.c */
 int _is_prsent(string str);
 
+/* _error_message.c */
 void _error_MESSAGE(dou_p argv, size_t line_num, dou_p cmmd, string key_w);
+
+/* _execmd.c */
 void _execmd(dou_p local_argv, dou_p env, dou_p argv, size_t line_num);
+
+/* _tokenizer.c */
 int _tokenize_slt_exec(string gtln, dou_p env, dou_p av, size_t l_dx);
-size_t _getline(char **getlineptr, size_t *n, int f_d);
 dou_p _tokenization(string str, string _delimiters);
+
+/* _getline.c */
+size_t _getline(char **getlineptr, size_t *n, int f_d);
+
+/* malloc.c */
 void *_realloc(void *ptr, size_t new_size);
 void _free(void *_malloc, int is_dou_p);
+
 int _print_num(size_t _n, int _c);
-string _get_PATH(string cmmd);
+
+/* _getters.c */
+string _get_PATH(string command);
 string _getenv(string str);
 
 #endif /* End of Include Guard */
