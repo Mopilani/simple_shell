@@ -8,9 +8,10 @@
  */
 void _free(void *_mem, int is_dou_p)
 {
-	_print_string("Catch");
 	int x = 0;
 	void **alloc;
+	
+	_print_string("Catch");
 
 	if (is_dou_p)
 	{
