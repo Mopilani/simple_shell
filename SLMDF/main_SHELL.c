@@ -13,7 +13,7 @@ int main(int ac, dou_p argv, dou_p env)
 	string getline_ptr = NULL;
 	/*dou_p dou_argv, semi_colon;*/
 
-	(void)_cxt;
+	(void)ac;
 	while (GERRY)
 	{
 		if (isatty(STDIN_FILENO))

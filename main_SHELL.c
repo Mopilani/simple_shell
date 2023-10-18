@@ -2,8 +2,8 @@
 
 /**
  * main - Simple_Shell main function.
- * @argv: passed args double pointer.
  * @ac: args count.
+ * @argv: passed args double pointer.
  * @env: Environmental variable.
  * Return: returns 0 on success.
  */
@@ -13,7 +13,7 @@ int main(int ac, dou_p argv, dou_p env)
 	string getline_ptr = NULL;
 	/*dou_p dou_argv, semi_colon;*/
 
-	(void)_cxt;
+	(void)ac;
 	while (GERRY)
 	{
 		if (isatty(STDIN_FILENO))
