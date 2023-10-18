@@ -13,7 +13,7 @@
 #include <string.h>
 
 #define ERROR -1
-#define _BUFSIZE 1024
+#define _BFFSZ 1024
 
 typedef char *string;
 typedef char **dou_p;
